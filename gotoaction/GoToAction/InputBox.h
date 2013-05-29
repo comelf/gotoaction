@@ -8,28 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import "DBconnect.h"
-@interface InputBox : NSObject
+@interface InputBox : NSObject <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
-    UITextField *textTitle;
     UIView *bg;
-    UITextView *textContent;
     UIScrollView *scrollViewPointer;
     int numIndex;
     float value_x,value_y;
     DBconnect* DBinIB;
-    InputBox* next;
+
 
 }
-
-
+@property UITextField *textTitle;
+@property UITextView *textContent;
+@property int savedNum;
 -(void) initCoordinate:(int)numidx
                      x:(float)_x
                      y:(float)_y
                 scroll:(UIScrollView*)mainScrollView
                 DBinit:(DBconnect*)db;
 -(void) createBox;
--(void) addNext;
--(void) removeBox;
--(void) addLast;
--(void) printlog;
+-(void) dataSave:(NSString*)imgPath;
+-(void) deleteBox;
+-(IBAction)imgAdd :(id)sender;
+-(void) relocation:(int)num;
 @end

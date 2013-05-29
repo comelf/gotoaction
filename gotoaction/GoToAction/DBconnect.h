@@ -15,13 +15,24 @@
     NSString* DBfield1;
     NSString* DBfield2;
     NSString* DBfield3;
+    sqlite3_stmt *statment;
+    int total;
 }
+
 -(NSString*) filePath;
 -(void)openDB;
 -(void) createTable:(NSString*) tableName
             imgPath:(NSString*) img_path
           textField:(NSString*) text_field
                 Idx:(NSString*) index_n;
--(void) saveDB:(NSString*)value1
-       imgPath:(NSString*)value2;
+-(void) saveDB:(int)value1
+         title:(NSString*)value2
+       content:(NSString*)value3;
+-(void) updateDB:(int)value1
+           title:(NSString*)value2
+         content:(NSString*)value3;
+-(void) deleteDB:(int)key;
+-(void) deleteDBall;
+- (id)dbQuerySelect;
+-(int) totalRecord;
 @end

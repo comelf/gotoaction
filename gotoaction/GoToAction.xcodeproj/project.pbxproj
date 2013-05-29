@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0225AC871755CA47009846A8 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0225AC851755CA47009846A8 /* ChildViewController.m */; };
+		0225AC881755CA47009846A8 /* ChildViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0225AC861755CA47009846A8 /* ChildViewController.xib */; };
+		0225AC8A1755FAA8009846A8 /* addimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0225AC891755FAA8009846A8 /* addimg.png */; };
+		0225AC8C1755FBCA009846A8 /* delimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0225AC8B1755FBCA009846A8 /* delimg.png */; };
 		025145A41749DE41002D881D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025145A31749DE41002D881D /* UIKit.framework */; };
 		025145A61749DE41002D881D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025145A51749DE41002D881D /* Foundation.framework */; };
 		025145A81749DE41002D881D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025145A71749DE41002D881D /* CoreGraphics.framework */; };
@@ -24,9 +28,16 @@
 		02E0D4D8174CD1F800F8ED19 /* DBconnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E0D4D7174CD1F800F8ED19 /* DBconnect.m */; };
 		02E0D4DA174CE14100F8ED19 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E0D4D9174CE14100F8ED19 /* libsqlite3.0.dylib */; };
 		02E0D4DC174CE1CD00F8ED19 /* manual.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 02E0D4DB174CE1CD00F8ED19 /* manual.sqlite */; };
+		AF96338C1755E45400D2D1CB /* arrowleft.png in Resources */ = {isa = PBXBuildFile; fileRef = AF96338A1755E45400D2D1CB /* arrowleft.png */; };
+		AF96338D1755E45400D2D1CB /* arrowright.png in Resources */ = {isa = PBXBuildFile; fileRef = AF96338B1755E45400D2D1CB /* arrowright.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0225AC841755CA47009846A8 /* ChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewController.h; sourceTree = "<group>"; };
+		0225AC851755CA47009846A8 /* ChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewController.m; sourceTree = "<group>"; };
+		0225AC861755CA47009846A8 /* ChildViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewController.xib; sourceTree = "<group>"; };
+		0225AC891755FAA8009846A8 /* addimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addimg.png; path = GoToAction/addimg.png; sourceTree = "<group>"; };
+		0225AC8B1755FBCA009846A8 /* delimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = delimg.png; path = ../../delimg.png; sourceTree = "<group>"; };
 		025145A01749DE41002D881D /* GoToAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoToAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025145A31749DE41002D881D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		025145A51749DE41002D881D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +63,8 @@
 		02E0D4D7174CD1F800F8ED19 /* DBconnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBconnect.m; sourceTree = "<group>"; };
 		02E0D4D9174CE14100F8ED19 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		02E0D4DB174CE1CD00F8ED19 /* manual.sqlite */ = {isa = PBXFileReference; lastKnownFileType = text; path = manual.sqlite; sourceTree = "<group>"; };
+		AF96338A1755E45400D2D1CB /* arrowleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowleft.png; sourceTree = "<group>"; };
+		AF96338B1755E45400D2D1CB /* arrowright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowright.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,8 @@
 		025145971749DE41002D881D = {
 			isa = PBXGroup;
 			children = (
+				0225AC8B1755FBCA009846A8 /* delimg.png */,
+				0225AC891755FAA8009846A8 /* addimg.png */,
 				025145A91749DE41002D881D /* GoToAction */,
 				025145A21749DE41002D881D /* Frameworks */,
 				025145A11749DE41002D881D /* Products */,
@@ -115,6 +130,8 @@
 				02E0D4DB174CE1CD00F8ED19 /* manual.sqlite */,
 				025145AB1749DE41002D881D /* GoToAction-Info.plist */,
 				025145AC1749DE41002D881D /* InfoPlist.strings */,
+				AF96338A1755E45400D2D1CB /* arrowleft.png */,
+				AF96338B1755E45400D2D1CB /* arrowright.png */,
 				025145AF1749DE41002D881D /* main.m */,
 				025145B11749DE41002D881D /* GoToAction-Prefix.pch */,
 				025145B51749DE41002D881D /* Default.png */,
@@ -133,6 +150,9 @@
 				025145CB1749DEC5002D881D /* EditView.h */,
 				025145CC1749DEC5002D881D /* EditView.m */,
 				025145CD1749DEC5002D881D /* EditView.xib */,
+				0225AC841755CA47009846A8 /* ChildViewController.h */,
+				0225AC851755CA47009846A8 /* ChildViewController.m */,
+				0225AC861755CA47009846A8 /* ChildViewController.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -199,6 +219,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0225AC8C1755FBCA009846A8 /* delimg.png in Resources */,
+				0225AC8A1755FAA8009846A8 /* addimg.png in Resources */,
 				02E0D4DC174CE1CD00F8ED19 /* manual.sqlite in Resources */,
 				025145AE1749DE41002D881D /* InfoPlist.strings in Resources */,
 				025145B61749DE41002D881D /* Default.png in Resources */,
@@ -206,6 +228,9 @@
 				025145BA1749DE41002D881D /* Default-568h@2x.png in Resources */,
 				025145C01749DE41002D881D /* ViewController.xib in Resources */,
 				025145CF1749DEC5002D881D /* EditView.xib in Resources */,
+				0225AC881755CA47009846A8 /* ChildViewController.xib in Resources */,
+				AF96338C1755E45400D2D1CB /* arrowleft.png in Resources */,
+				AF96338D1755E45400D2D1CB /* arrowright.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +247,7 @@
 				025145CE1749DEC5002D881D /* EditView.m in Sources */,
 				02D8E48D174B73060072A26C /* InputBox.m in Sources */,
 				02E0D4D8174CD1F800F8ED19 /* DBconnect.m in Sources */,
+				0225AC871755CA47009846A8 /* ChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

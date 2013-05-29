@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "EditView.h"
 #import "DBconnect.h"
-
+#import "ChildViewController.h"
 @interface ViewController : UIViewController
 {
     DBconnect* DB;
+    NSMutableArray* DBin;
+    int maxRecord;
+    int total;
 }
 
-
+- (IBAction)newClick:(id)sender;
+- (IBAction)loadClick:(id)sender;
+- (IBAction)forChildPage:(id)sender;
 @end

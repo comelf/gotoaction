@@ -9,6 +9,8 @@
 #import "InputBox.h"
 
 @implementation InputBox
+@synthesize textTitle,textContent,savedNum;
+
 -(void) initCoordinate:(int)numidx
                      x:(float)_x
                      y:(float)_y
@@ -22,17 +24,19 @@
     DBinIB = db;
 
     //title 설정
-    textTitle = [[UITextField alloc] initWithFrame:CGRectMake(value_x+10, value_y+250,200,30)];
+    textTitle = [[UITextField alloc] initWithFrame:CGRectMake(value_x+10, value_y+255,200,30)];
     textTitle.borderStyle = UITextBorderStyleRoundedRect;
     
     //background_view 설정
     bg = [[UIView alloc] initWithFrame:CGRectMake(value_x,value_y,220,500)];
-    bg.backgroundColor =[UIColor colorWithRed:0.0f green:102.0f blue:20.0f alpha:1.0f];
+    bg.backgroundColor =[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.7f];
     
     //textContent 설정
     textContent = [[UITextView alloc] initWithFrame:CGRectMake(value_x+10,value_y+300,200,100)];
     textContent.backgroundColor=[UIColor colorWithRed:100.0 green:100.0 blue:100.0 alpha:1.0];
     [textContent setFont:[UIFont fontWithName:@"Helvetica" size:15]];
+    
+
 }
 
 -(void) createBox
@@ -42,33 +46,40 @@
     [scrollViewPointer addSubview:textTitle];
     [scrollViewPointer addSubview:textContent];
 
+
 }
--(void) addLast
+
+
+-(void) dataSave:(NSString*)imgPath
 {
-    next = [[InputBox alloc]init];
-    numIndex +=1;
-    [next initCoordinate:(numIndex) x:(30+(240*(numIndex))) y:50 scroll:scrollViewPointer DBinit:DBinIB];
-    
-    if(numIndex>2){
-        scrollViewPointer.contentSize = CGSizeMake(768+((numIndex-2)*240), 1004);
+    /*
+    if(numIndex<savedNum)
+    {
+        [DBinIB updateDB:numIndex title:textTitle.text content:textContent.text];
     }
-    [next createBox];
-
+    else{
+    */
+        [DBinIB saveDB:numIndex title:imgPath content:textContent.text];
+    //}
+    NSLog(@"%d, %@, %@",numIndex,imgPath,textContent.text);
 }
--(void) addNext
+
+-(void) deleteBox
+{
+    textContent.removeFromSuperview;
+    textTitle.removeFromSuperview;
+    bg.removeFromSuperview;
+    
+    NSLog(@"delete");
+}
+-(void) relocation:(int)num
 {
     
+    numIndex = num;
+    value_x = 30+(240*(numIndex));
+    textTitle.frame = CGRectMake(value_x+10, value_y+255,200,30);
+    bg.frame = CGRectMake(value_x,value_y,220,500);
+    textContent.frame = CGRectMake(value_x+10,value_y+300,200,100);
 }
--(void) removeBox
-{
-    
-}
--(void) printlog
-{
-    NSLog(@"%@,%d",textTitle.text,numIndex);
-    [next printlog];
-}
-
-
 
 @end
